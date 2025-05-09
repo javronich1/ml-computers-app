@@ -1,0 +1,15 @@
+# python
+__pycache__/
+.venv/
+*.py[cod]
+
+# data & models
+data/raw/
+models/
+
+# notebooks
+*.ipynb_checkpoints/
+
+# OS / IDE cruft
+.DS_Store
+.vscode/
