@@ -4,8 +4,8 @@ __pycache__/
 *.py[cod]
 
 # data & models
-data/raw/
-models/
+# data/raw/
+# models/
 
 # notebooks
 *.ipynb_checkpoints/
