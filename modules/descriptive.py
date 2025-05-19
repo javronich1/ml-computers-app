@@ -12,7 +12,7 @@ def app():
     st.header("🔍 Descriptive Analytics")
 
     # 1. Load featurized data
-    df = pd.read_csv("../data/processed/featurized_final.csv", low_memory=False)
+    df = pd.read_csv("../data/processed/featurized_selected.csv", low_memory=False)
 
     # 2. Recompute segments via clustering on key specs
     features = ['CPU_perf', 'log_RAM_GB', 'ppi', 'log_SSD_GB']
@@ -26,7 +26,7 @@ def app():
     df['segment'] = [seg_map[i] for i in labels]
 
     # 3. Display segment profiles
-    seg_df = pd.read_csv("data/processed/segment_profiles.csv", index_col=0)
+    seg_df = pd.read_csv("../data/processed/featurized_selected.csv", index_col=0)
     st.subheader("Segment Profiles")
     st.dataframe(seg_df.style.format("{:.2f}"))
 
